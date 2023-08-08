@@ -20,6 +20,7 @@
 		7DDBD9182A82AB590058CFFD /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD9172A82AB590058CFFD /* profileView.swift */; };
 		7DDBD91A2A82ADD10058CFFD /* settingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD9192A82ADD10058CFFD /* settingsRowView.swift */; };
 		7DDBD91C2A82B3E40058CFFD /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD91B2A82B3E40058CFFD /* user.swift */; };
+		7DDBD91E2A82CE020058CFFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DDBD91D2A82CE020058CFFD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7DDBD9172A82AB590058CFFD /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
 		7DDBD9192A82ADD10058CFFD /* settingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsRowView.swift; sourceTree = "<group>"; };
 		7DDBD91B2A82B3E40058CFFD /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		7DDBD91D2A82CE020058CFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				7DDBD90A2A8279F10058CFFD /* App */,
 				7DDBD8E32A7BE3190058CFFD /* Assets.xcassets */,
 				7DDBD8E52A7BE3190058CFFD /* booknook.entitlements */,
+				7DDBD91D2A82CE020058CFFD /* GoogleService-Info.plist */,
 				7DDBD8E62A7BE3190058CFFD /* Preview Content */,
 			);
 			path = booknook;
@@ -309,6 +312,7 @@
 			files = (
 				7DDBD8E82A7BE3190058CFFD /* Preview Assets.xcassets in Resources */,
 				7DDBD8E42A7BE3190058CFFD /* Assets.xcassets in Resources */,
+				7DDBD91E2A82CE020058CFFD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
