@@ -1,0 +1,62 @@
+//
+//  loginView.swift
+//  booknook
+//
+//  Created by Caleb Long on 8/8/23.
+//
+
+import SwiftUI
+
+struct loginView: View {
+    @State private var email = ""
+    @State private var password = ""
+    var body: some View {
+        NavigationStack{
+            VStack{
+                //Image
+                Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
+               
+                VStack(spacing: 24){
+                    //Username
+                    inputView(text: $email,
+                              title: "Email Address",
+                              placeholder: "name@example.com")
+                    .autocapitalization(.none)
+                    
+                    //Password
+                    inputView(text: $password,
+                              title: "Password",
+                              placeholder: "Enter Your Password",
+                              isSecureField: true)
+                }
+                .padding(.horizontal)
+                
+                //Forgot Password
+                
+                //Sign In Button
+                Button{
+                    print("Log User In")
+                }label: {
+                    HStack{
+                        Text("Sign In")
+                            .fontWeight(.semibold)
+                        Image(systemName: "arrow.right")
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                }
+                .background(Color(.systemBlue))
+                .cornerRadius(10)
+                
+                Spacer()
+                //Create Account
+            }
+        }
+    }
+}
+
+struct loginView_Previews: PreviewProvider {
+    static var previews: some View {
+        loginView()
+    }
+}

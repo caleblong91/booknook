@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct ContentView: View {
     var body: some View {
@@ -17,10 +16,7 @@ struct ContentView: View {
                 Image("logo").resizable().cornerRadius(15).aspectRatio(contentMode: .fit)
             }
         }
-        
-      
     }
-        
 }
 
 struct ContentView_Previews: PreviewProvider {
