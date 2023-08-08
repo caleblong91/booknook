@@ -15,7 +15,7 @@ struct loginView: View {
             VStack{
                 //Image
                 Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
-               
+                
                 VStack(spacing: 24){
                     //Username
                     inputView(text: $email,
@@ -31,7 +31,7 @@ struct loginView: View {
                 }
                 .padding(.horizontal)
                 
-                //Forgot Password
+                //Forgot Password TO-DO
                 
                 //Sign In Button
                 Button{
@@ -47,9 +47,23 @@ struct loginView: View {
                 }
                 .background(Color(.systemBlue))
                 .cornerRadius(10)
+                .padding(.top, 24)
                 
                 Spacer()
                 //Create Account
+                
+                NavigationLink{
+                    RegistrationView()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    HStack{
+                        Text("Don't Have an Account")
+                        Text("Sign Up")
+                            .fontWeight(.bold
+                            )
+                    }
+                    .font(.system(size: 14))
+                }
             }
         }
     }

@@ -16,6 +16,10 @@
 		7DDBD8FE2A7BE3190058CFFD /* booknookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD8FD2A7BE3190058CFFD /* booknookUITestsLaunchTests.swift */; };
 		7DDBD9122A8284880058CFFD /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD9112A8284880058CFFD /* loginView.swift */; };
 		7DDBD9142A8288100058CFFD /* inputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD9132A8288100058CFFD /* inputView.swift */; };
+		7DDBD9162A82A6060058CFFD /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD9152A82A6060058CFFD /* RegistrationView.swift */; };
+		7DDBD9182A82AB590058CFFD /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD9172A82AB590058CFFD /* profileView.swift */; };
+		7DDBD91A2A82ADD10058CFFD /* settingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD9192A82ADD10058CFFD /* settingsRowView.swift */; };
+		7DDBD91C2A82B3E40058CFFD /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD91B2A82B3E40058CFFD /* user.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		7DDBD8FD2A7BE3190058CFFD /* booknookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booknookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7DDBD9112A8284880058CFFD /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		7DDBD9132A8288100058CFFD /* inputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputView.swift; sourceTree = "<group>"; };
+		7DDBD9152A82A6060058CFFD /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		7DDBD9172A82AB590058CFFD /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
+		7DDBD9192A82ADD10058CFFD /* settingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsRowView.swift; sourceTree = "<group>"; };
+		7DDBD91B2A82B3E40058CFFD /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				7DDBD9132A8288100058CFFD /* inputView.swift */,
+				7DDBD9192A82ADD10058CFFD /* settingsRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 		7DDBD90D2A827A1C0058CFFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7DDBD91B2A82B3E40058CFFD /* user.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				7DDBD9112A8284880058CFFD /* loginView.swift */,
+				7DDBD9152A82A6060058CFFD /* RegistrationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 		7DDBD9102A827AA50058CFFD /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7DDBD9172A82AB590058CFFD /* profileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -321,10 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DDBD91A2A82ADD10058CFFD /* settingsRowView.swift in Sources */,
 				7DDBD8E22A7BE3180058CFFD /* ContentView.swift in Sources */,
 				7DDBD9142A8288100058CFFD /* inputView.swift in Sources */,
+				7DDBD9182A82AB590058CFFD /* profileView.swift in Sources */,
+				7DDBD91C2A82B3E40058CFFD /* user.swift in Sources */,
 				7DDBD9122A8284880058CFFD /* loginView.swift in Sources */,
 				7DDBD8E02A7BE3180058CFFD /* booknookApp.swift in Sources */,
+				7DDBD9162A82A6060058CFFD /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
