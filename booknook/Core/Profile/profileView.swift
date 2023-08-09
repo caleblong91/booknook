@@ -55,7 +55,7 @@ struct profileView: View {
                         Spacer()
                     }
                     Button{
-                        print("Sign Out...")
+                     viewModel.signOut()
                     } label: {
                         settingsRowView(imagename: "arrow.left.circle.fill", title: "Sign Out", tintColor: .red)
                     }
@@ -73,6 +73,6 @@ struct profileView: View {
 
 struct profileView_Previews: PreviewProvider {    
     static var previews: some View {
-        profileView()
+        profileView().environmentObject(authViewModel())
     }
 }
