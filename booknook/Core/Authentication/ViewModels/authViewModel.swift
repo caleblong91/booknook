@@ -94,4 +94,17 @@ class authViewModel: ObservableObject{
         
         print("DEBUG: Current User Is\(String(describing: self.currentUser))")
     }
+    
+    func forgotPasswordEmail(withEmail email: String) async throws{
+        let actionCodeSettings = ActionCodeSettings()
+        actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+        actionCodeSettings.handleCodeInApp = true
+        
+        
+        do{
+           try await Auth.auth().sendPasswordReset(withEmail: email , actionCodeSettings: actionCodeSettings)
+        } catch{
+            print("DEBUG: Failed to send email with error\(error.localizedDescription)")
+        }
+    }
 }

@@ -33,7 +33,17 @@ struct loginView: View {
                 .padding(.horizontal)
                 
                 //Forgot Password TO-DO
-                
+                NavigationLink{
+                    forgotPasswordView()
+                } label: {
+                    HStack{
+                        Spacer()
+                        Text("Forgot Password")
+                            .fontWeight(.bold
+                            ).font(.footnote).padding(.trailing, 50)
+                    }
+                    .font(.system(size: 14))
+                }
                 //Sign In Button
                 Button{
                     Task{

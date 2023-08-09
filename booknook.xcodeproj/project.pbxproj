@@ -35,6 +35,7 @@
 		7D8016E02A830C2E00613A43 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D8016DF2A830C2E00613A43 /* FirebaseStorage */; };
 		7D8016E22A830C2E00613A43 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7D8016E12A830C2E00613A43 /* FirebaseStorageCombine-Community */; };
 		7D8016E42A83CED900613A43 /* ReauthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8016E32A83CED900613A43 /* ReauthView.swift */; };
+		7D8016E82A84083600613A43 /* forgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8016E72A84083600613A43 /* forgotPasswordView.swift */; };
 		7DDBD8E02A7BE3180058CFFD /* booknookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD8DF2A7BE3180058CFFD /* booknookApp.swift */; };
 		7DDBD8E22A7BE3180058CFFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD8E12A7BE3180058CFFD /* ContentView.swift */; };
 		7DDBD8E42A7BE3190058CFFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDBD8E32A7BE3190058CFFD /* Assets.xcassets */; };
@@ -71,6 +72,8 @@
 /* Begin PBXFileReference section */
 		7D8016AC2A82EF1400613A43 /* authViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authViewModel.swift; sourceTree = "<group>"; };
 		7D8016E32A83CED900613A43 /* ReauthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReauthView.swift; sourceTree = "<group>"; };
+		7D8016E72A84083600613A43 /* forgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotPasswordView.swift; sourceTree = "<group>"; };
+		7D8016E92A84368F00613A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7DDBD8DC2A7BE3180058CFFD /* booknook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = booknook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDBD8DF2A7BE3180058CFFD /* booknookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booknookApp.swift; sourceTree = "<group>"; };
 		7DDBD8E12A7BE3180058CFFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 				7DDBD9152A82A6060058CFFD /* RegistrationView.swift */,
 				7DDBD9112A8284880058CFFD /* loginView.swift */,
 				7D8016E32A83CED900613A43 /* ReauthView.swift */,
+				7D8016E72A84083600613A43 /* forgotPasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +187,7 @@
 		7DDBD8DE2A7BE3180058CFFD /* booknook */ = {
 			isa = PBXGroup;
 			children = (
+				7D8016E92A84368F00613A43 /* Info.plist */,
 				7DDBD90D2A827A1C0058CFFD /* Model */,
 				7DDBD90C2A827A160058CFFD /* Components */,
 				7DDBD90B2A827A0D0058CFFD /* Core */,
@@ -444,6 +449,7 @@
 			files = (
 				7DDBD91A2A82ADD10058CFFD /* settingsRowView.swift in Sources */,
 				7DDBD8E22A7BE3180058CFFD /* ContentView.swift in Sources */,
+				7D8016E82A84083600613A43 /* forgotPasswordView.swift in Sources */,
 				7DDBD9142A8288100058CFFD /* inputView.swift in Sources */,
 				7D8016E42A83CED900613A43 /* ReauthView.swift in Sources */,
 				7DDBD9182A82AB590058CFFD /* profileView.swift in Sources */,
@@ -608,6 +614,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"booknook/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = booknook/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -644,6 +651,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"booknook/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = booknook/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
