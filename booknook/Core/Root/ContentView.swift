@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: authViewModel
     var body: some View {
-        ZStack {
-            Color(.init(red: 252.0, green: 252.0, blue: 252.0, alpha: 1.0)).ignoresSafeArea()
-            
-            VStack{
-                Image("logo").resizable().cornerRadius(15).aspectRatio(contentMode: .fit)
+        Group{
+            if(viewModel.userSession != nil){
+                profileView()
+            }
+            else{
+                loginView()
             }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject({ () -> authViewModel in
+            let envObj = authViewModel()
+            return envObj
+        }() )
             
     }
     

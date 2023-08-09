@@ -11,7 +11,6 @@ struct User: Identifiable, Codable{
     let id: String
     let fullname: String
     let email: String
-    let subscription: String
    
     //Grabs initals from fullname to use in profile view
     //To-do use avatars or images
@@ -26,6 +25,6 @@ struct User: Identifiable, Codable{
 }
 
 extension User{
-    static var MOCK_USER = User(id: NSUUID().uuidString, fullname: "Steve Perry", email: "test@gmail.com", subscription: "Paid")
+    static var MOCK_USER = User(id: NSUUID().uuidString, fullname: "Steve Perry", email: "test@gmail.com")
     
 }

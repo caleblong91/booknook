@@ -53,9 +53,7 @@ struct profileView: View {
                     
                     Spacer()
                     
-                    Text(User.MOCK_USER.subscription)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+                    
                 }
                 Button{
                     print("Sign Out...")
