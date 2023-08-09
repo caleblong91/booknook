@@ -62,7 +62,28 @@ class authViewModel: ObservableObject{
     }
     
     func deleteAccount(){
-        print("Deleting Account...")
+        let user = Auth.auth().currentUser
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        user?.delete { error in
+          if let error = error {
+              print("DEBUG:Failed to Delete Account \(error.localizedDescription)")
+          } else {
+              self.userSession = nil
+              self.currentUser = nil
+              Firestore.firestore().collection("users").document(uid).delete()
+              print("Account Deleted...")
+          }
+        }
+    }
+    
+    func reauthDeleteAccount(withEmail email: String, password: String) async throws{
+        do{
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+            deleteAccount()
+        } catch{
+            print("DEBUG: Failed to Sign In with error \(error.localizedDescription)")
+        }
     }
     
     func fetchUser() async{
@@ -71,6 +92,6 @@ class authViewModel: ObservableObject{
         guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else {return}
         self.currentUser = try? snapshot.data(as: User.self)
         
-        print("DEBUG: Current User Is\(self.currentUser)")
+        print("DEBUG: Current User Is\(String(describing: self.currentUser))")
     }
 }
