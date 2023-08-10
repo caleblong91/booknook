@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+
+struct AlertItem: Identifiable {
+    var id = UUID()
+    var title: Text
+    var message: Text?
+    var dismissButton: Alert.Button?
+}
+
 struct forgotPasswordView: View {
     @State private var email = ""
     @State private var codeExecutionSuccessful = false
-    @State private var showingAlert = false
     @State private var errorMessage = ""
+    @State private var alertItem: AlertItem?
     @EnvironmentObject var viewModel: authViewModel
     var body: some View {
         NavigationStack{
@@ -32,25 +40,20 @@ struct forgotPasswordView: View {
                 Button("Reset Password") {
                     Task{
                         do{
-                            try await codeExecutionSuccessful = viewModel.forgotPasswordEmail(withEmail:email)
-                            print("3: \(codeExecutionSuccessful)")
+                            try await viewModel.forgotPasswordEmail(withEmail:email)
+                            codeExecutionSuccessful = true
+                            self.alertItem = AlertItem(title: Text("Success"), message: Text("Please Check Your Email to Reset Your Password"), dismissButton: .default(Text("OK")))
                         }catch{
-                            showingAlert = true
                             errorMessage = error.localizedDescription
+                            self.alertItem = AlertItem(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
                         }
-                        print("4: \(codeExecutionSuccessful)")
                     }
-                }.alert(isPresented: $showingAlert){
-                    Alert(
-                        title: Text("Error"),
-                        message: Text(errorMessage),
-                        primaryButton: .default(Text("OK")),
-                        secondaryButton: .cancel(Text("Cancel"))
-                    )
+                }.alert(item: $alertItem) { alertItem in
+                    Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
                 }
-                               
+                
                 NavigationLink(
-                    destination: loginView(),
+                    destination: loginView().navigationBarBackButtonHidden(),
                     isActive: $codeExecutionSuccessful,
                     label: {
                         
