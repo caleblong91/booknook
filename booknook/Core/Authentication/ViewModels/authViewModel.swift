@@ -95,16 +95,18 @@ class authViewModel: ObservableObject{
         print("DEBUG: Current User Is\(String(describing: self.currentUser))")
     }
     
-    func forgotPasswordEmail(withEmail email: String) async throws{
-        let actionCodeSettings = ActionCodeSettings()
-        actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
-        actionCodeSettings.handleCodeInApp = true
-        
-        
+    func forgotPasswordEmail(withEmail email: String) async throws -> Bool{
+       //Need to use universal deep links to do reset in app
+        var codeExecutionSuccessful = false
         do{
-           try await Auth.auth().sendPasswordReset(withEmail: email , actionCodeSettings: actionCodeSettings)
+           try await Auth.auth().sendPasswordReset(withEmail: email)
+            print("1: \(codeExecutionSuccessful)")
+            return codeExecutionSuccessful == true;
+            print("2: \(codeExecutionSuccessful)")
+            
         } catch{
             print("DEBUG: Failed to send email with error\(error.localizedDescription)")
+            throw error
         }
     }
 }

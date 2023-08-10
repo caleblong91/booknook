@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseAppCheck
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: authViewModel
     var body: some View {
         Group{
             if(viewModel.userSession != nil){
-                profileView()
+                homePage()
             }
             else{
                 loginView()

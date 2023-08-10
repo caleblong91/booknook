@@ -9,6 +9,9 @@ import SwiftUI
 
 struct forgotPasswordView: View {
     @State private var email = ""
+    @State private var codeExecutionSuccessful = false
+    @State private var showingAlert = false
+    @State private var errorMessage = ""
     @EnvironmentObject var viewModel: authViewModel
     var body: some View {
         NavigationStack{
@@ -25,25 +28,35 @@ struct forgotPasswordView: View {
                 }
                 .padding(.horizontal).padding(.bottom,25)
                 
-                NavigationLink{
-                    //RegistrationView()
-                       
-                } label: {
                     
-                        Button{
-                            Task{
-                                try await viewModel.forgotPasswordEmail(withEmail:email)
-                            }
-                        } label:{
-                            HStack{
-                                Text("Reset Password")
-                                .fontWeight(.bold
-                                )
-                            }.foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 32, height: 48)
-                        }.background(Color(.systemBlue))
-                            .cornerRadius(10)
-                    
+                Button("Reset Password") {
+                    Task{
+                        do{
+                            try await codeExecutionSuccessful = viewModel.forgotPasswordEmail(withEmail:email)
+                            print("3: \(codeExecutionSuccessful)")
+                        }catch{
+                            showingAlert = true
+                            errorMessage = error.localizedDescription
+                        }
+                        print("4: \(codeExecutionSuccessful)")
+                    }
+                }.alert(isPresented: $showingAlert){
+                    Alert(
+                        title: Text("Error"),
+                        message: Text(errorMessage),
+                        primaryButton: .default(Text("OK")),
+                        secondaryButton: .cancel(Text("Cancel"))
+                    )
                 }
+                               
+                NavigationLink(
+                    destination: loginView(),
+                    isActive: $codeExecutionSuccessful,
+                    label: {
+                        
+                    }
+                )
+                
                 Spacer()
             }
         }

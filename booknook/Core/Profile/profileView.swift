@@ -63,24 +63,23 @@ struct profileView: View {
                         }
                         
                         NavigationLink{
-                            //viewModel.deleteAccount()
                             ReauthView()
                         } label: {
                             settingsRowView(imagename: "xmark.circle.fill", title: "Delete Account", tintColor: .red)
-                         
+                            
                         }
-                        
-                        
                     }
                 }
             }
-            
         }
     }
 }
 
 struct profileView_Previews: PreviewProvider {    
     static var previews: some View {
-        profileView().environmentObject(authViewModel())
+        profileView().environmentObject({ () -> authViewModel in
+            let envObj = authViewModel()
+            return envObj
+        }() )
     }
 }

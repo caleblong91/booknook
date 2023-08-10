@@ -36,6 +36,7 @@
 		7D8016E22A830C2E00613A43 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7D8016E12A830C2E00613A43 /* FirebaseStorageCombine-Community */; };
 		7D8016E42A83CED900613A43 /* ReauthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8016E32A83CED900613A43 /* ReauthView.swift */; };
 		7D8016E82A84083600613A43 /* forgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8016E72A84083600613A43 /* forgotPasswordView.swift */; };
+		7D8016EB2A8514A600613A43 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8016EA2A8514A600613A43 /* homePage.swift */; };
 		7DDBD8E02A7BE3180058CFFD /* booknookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD8DF2A7BE3180058CFFD /* booknookApp.swift */; };
 		7DDBD8E22A7BE3180058CFFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD8E12A7BE3180058CFFD /* ContentView.swift */; };
 		7DDBD8E42A7BE3190058CFFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDBD8E32A7BE3190058CFFD /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		7D8016E32A83CED900613A43 /* ReauthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReauthView.swift; sourceTree = "<group>"; };
 		7D8016E72A84083600613A43 /* forgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotPasswordView.swift; sourceTree = "<group>"; };
 		7D8016E92A84368F00613A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7D8016EA2A8514A600613A43 /* homePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; };
 		7DDBD8DC2A7BE3180058CFFD /* booknook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = booknook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDBD8DF2A7BE3180058CFFD /* booknookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booknookApp.swift; sourceTree = "<group>"; };
 		7DDBD8E12A7BE3180058CFFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				7DDBD8E12A7BE3180058CFFD /* ContentView.swift */,
+				7D8016EA2A8514A600613A43 /* homePage.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				7DDBD91A2A82ADD10058CFFD /* settingsRowView.swift in Sources */,
 				7DDBD8E22A7BE3180058CFFD /* ContentView.swift in Sources */,
 				7D8016E82A84083600613A43 /* forgotPasswordView.swift in Sources */,
+				7D8016EB2A8514A600613A43 /* homePage.swift in Sources */,
 				7DDBD9142A8288100058CFFD /* inputView.swift in Sources */,
 				7D8016E42A83CED900613A43 /* ReauthView.swift in Sources */,
 				7DDBD9182A82AB590058CFFD /* profileView.swift in Sources */,
