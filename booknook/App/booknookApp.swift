@@ -17,16 +17,40 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     return true
   }
+    
+}
+
+class ThisAppCheckProviderFactory: NSObject, AppCheckProviderFactory {
+  func createProvider(with app: FirebaseApp) -> AppCheckProvider? {
+    if #available(iOS 14.0, *) {
+      return AppAttestProvider(app: app)
+    } else {
+      return DeviceCheckProvider(app: app)
+    }
+
+  }
 }
 
 @main
 struct booknookApp: App {
-    @StateObject var viewModel = authViewModel()
+    init(){
+       let providerFactory = ThisAppCheckProviderFactory()
+       AppCheck.setAppCheckProviderFactory(providerFactory)
+        
+    }
+    @StateObject var viewModelAuth = authViewModel()
+    @StateObject var viewModelApp = appViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(viewModel)
+                .environmentObject(viewModelAuth)
+                .environmentObject(viewModelApp)
+                .task {
+                    await viewModelApp.requestDataScannerAccessStatus()
+                }
         }
     }
 }

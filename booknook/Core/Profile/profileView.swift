@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct profileView: View {
-    @EnvironmentObject var viewModel : authViewModel
+    @EnvironmentObject var viewModelAuth : authViewModel
     var body: some View {
         NavigationStack{
-            if let user = viewModel.currentUser{
+            if let user = viewModelAuth.currentUser{
                 List{
                     Section{
                         HStack {
@@ -56,7 +56,7 @@ struct profileView: View {
                             Spacer()
                         }
                         Button{
-                            viewModel.signOut()
+                            viewModelAuth.signOut()
                             
                         } label: {
                             settingsRowView(imagename: "arrow.left.circle.fill", title: "Sign Out", tintColor: .red)

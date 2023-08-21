@@ -10,7 +10,10 @@ import FirebaseAppCheck
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: authViewModel
+    @EnvironmentObject var viewModelApp: appViewModel
+    
     var body: some View {
+        viewModelApp.displayScannerAccess(viewModelApp: viewModelApp)
         Group{
             if(viewModel.userSession != nil){
                 homePage()

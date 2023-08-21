@@ -21,15 +21,15 @@ struct homePage: View {
                     // Second Tab
                     Text("Second Tab Content")
                         .tabItem {
-                            Image(systemName: "heart.fill")
-                            Text("Favorites")
+                            Image(systemName: "book.fill")
+                            Text("My List")
                         }
                     
                     // Third Tab
                     Text("Third Tab Content")
                         .tabItem {
-                            Image(systemName: "person.fill")
-                            Text("Profile")
+                            Image(systemName: "barcode")
+                            Text("Add New")
                         }
             
                     // Fourth Tab
