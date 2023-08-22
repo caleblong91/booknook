@@ -26,7 +26,7 @@ struct homePage: View {
                         }
                     
                     // Third Tab
-                    Text("Third Tab Content")
+                    scannerView()
                         .tabItem {
                             Image(systemName: "barcode")
                             Text("Add New")

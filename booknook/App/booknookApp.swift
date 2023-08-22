@@ -33,11 +33,11 @@ class ThisAppCheckProviderFactory: NSObject, AppCheckProviderFactory {
 
 @main
 struct booknookApp: App {
-    init(){
-       let providerFactory = ThisAppCheckProviderFactory()
-       AppCheck.setAppCheckProviderFactory(providerFactory)
+    //init(){
+    //   let providerFactory = ThisAppCheckProviderFactory()
+    //   AppCheck.setAppCheckProviderFactory(providerFactory)
         
-    }
+    //}
     @StateObject var viewModelAuth = authViewModel()
     @StateObject var viewModelApp = appViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate

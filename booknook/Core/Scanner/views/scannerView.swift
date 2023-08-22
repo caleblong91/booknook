@@ -11,10 +11,26 @@ import VisionKit
 
 
 struct scannerView: View {
-   
+    @EnvironmentObject var viewModelApp: appViewModel
     
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        switch viewModelApp.dataScannerAccessStatus{
+        case .scannerAvailable:
+            mainView
+        case .cameraNotAvailable:
+            Text("Camera is not Available")
+        case .scannerNotAvailable:
+            Text("Scanner is not Available")
+        case .cameraAccessNotGranted:
+            Text("Allow Camera Access in your phones settings")
+        case .notDetermined:
+            Text("Requesting Camera Access")
+        }
+    }
+    
+    private var mainView : some View{
+        dataScannerView(recognizedItems: $viewModelApp.recognizedItems, recognizedDataTypes: viewModelApp.recognizedDataType, recognizesMultipleItems: viewModelApp.recognizesMultipleItems)
     }
 }
 
