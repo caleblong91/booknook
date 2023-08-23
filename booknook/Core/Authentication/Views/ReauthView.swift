@@ -21,8 +21,7 @@ struct ReauthView: View {
                 } else {
                     Image("darkHeader").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
                 }
-                //Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
-                
+
                 VStack(spacing: 24){
                     Text("To Delete Your Account, Please Re-enter Your Email and Password.").font(.headline).multilineTextAlignment(.center).padding(.bottom, 50)
                     
@@ -62,11 +61,5 @@ struct ReauthView: View {
 
             }
         }
-    }
-}
-
-struct ReauthView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReauthView()
     }
 }

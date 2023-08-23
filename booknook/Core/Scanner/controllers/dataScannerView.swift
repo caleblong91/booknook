@@ -69,5 +69,4 @@ struct dataScannerView: UIViewControllerRepresentable {
             print("Scanner became unavailable with error: \(error.localizedDescription)")
         }
     }
-    
 }

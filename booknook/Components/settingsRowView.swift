@@ -28,9 +28,3 @@ struct settingsRowView: View {
         }
     }
 }
-
-struct settingsRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        settingsRowView(imagename: "gear", title: "Version", tintColor: Color(.systemGray))
-    }
-}

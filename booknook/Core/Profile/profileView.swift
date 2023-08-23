@@ -76,12 +76,3 @@ struct profileView: View {
         }
     }
 }
-
-struct profileView_Previews: PreviewProvider {    
-    static var previews: some View {
-        profileView().environmentObject({ () -> authViewModel in
-            let envObj = authViewModel()
-            return envObj
-        }() )
-    }
-}

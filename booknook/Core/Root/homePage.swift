@@ -41,9 +41,3 @@ struct homePage: View {
                 }
     }
 }
-
-struct homePage_Previews: PreviewProvider {
-    static var previews: some View {
-        homePage()
-    }
-}

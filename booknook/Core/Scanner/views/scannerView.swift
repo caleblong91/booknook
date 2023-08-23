@@ -19,7 +19,6 @@ struct scannerView: View {
         ("Phone", .telephoneNumber),
         ("Email", .emailAddress),
         ("Address", .fullStreetAddress),*/
-        
     ]
     
     var body: some View {

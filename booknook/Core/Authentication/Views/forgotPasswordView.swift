@@ -32,8 +32,7 @@ struct forgotPasswordView: View {
                 } else {
                     Image("darkHeader").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
                 }
-                //Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
-                
+               
                 VStack(spacing: 24){
                     //Username
                     inputView(text: $email,
@@ -63,18 +62,10 @@ struct forgotPasswordView: View {
                     destination: loginView().navigationBarBackButtonHidden(),
                     isActive: $codeExecutionSuccessful,
                     label: {
-                        
-                    }
-                )
+                    })
                 
                 Spacer()
             }
         }
-    }
-}
-
-struct forgotPasswordView_Previews: PreviewProvider {
-    static var previews: some View {
-        forgotPasswordView()
     }
 }

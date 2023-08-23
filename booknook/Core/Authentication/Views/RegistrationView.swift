@@ -30,11 +30,6 @@ struct RegistrationView: View {
                     .frame(width: 10, height:80)
                     .padding(.vertical, 100)
             }
-           /* Image("header")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 10, height:80)
-                .padding(.vertical, 100)*/
             
             VStack(spacing: 24){
                 //Username
@@ -93,11 +88,5 @@ struct RegistrationView: View {
                 .font(.system(size: 14))
             }
         }
-    }
-}
-
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView()
     }
 }
