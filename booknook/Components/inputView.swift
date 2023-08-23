@@ -26,9 +26,3 @@ struct inputView: View {
         }
     }
 }
-
-struct inputView_Previews: PreviewProvider {
-    static var previews: some View {
-        inputView(text: .constant(""), title: "Email Address", placeholder: "name@example.com")
-    }
-}

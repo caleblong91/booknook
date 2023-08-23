@@ -48,9 +48,6 @@ struct scannerView: View {
                 .presentationDragIndicator(.visible)
                 .presentationBackground(.clear)
         }
-    
-            
-        
         .onChange(of: viewModelApp.scanType) { _ in viewModelApp.recognizedItems = []}
         .onChange(of: viewModelApp.textContentType) { _ in viewModelApp.recognizedItems = []}
         .onChange(of: viewModelApp.recognizesMultipleItems) { _ in viewModelApp.recognizedItems = []}
@@ -80,7 +77,6 @@ struct scannerView: View {
     }
     
     private var bottomContainerView : some View{
-        
         VStack{
             headerView
             ScrollView{
@@ -111,11 +107,5 @@ struct scannerView: View {
                 .padding()
             }
         }
-    }
-}
-
-struct scannerView_Previews: PreviewProvider {
-    static var previews: some View {
-        scannerView()
     }
 }
