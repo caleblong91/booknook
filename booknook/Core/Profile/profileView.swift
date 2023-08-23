@@ -9,6 +9,8 @@ import SwiftUI
 
 struct profileView: View {
     @EnvironmentObject var viewModelAuth : authViewModel
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         NavigationStack{
             if let user = viewModelAuth.currentUser{

@@ -14,14 +14,27 @@ struct RegistrationView: View {
     @State private var confirmPassword = ""
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModelAuth: authViewModel
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         VStack{
             //Image
-            Image("header")
+            if colorScheme == .light {
+                Image("lightHeader").resizable()
+                    .scaledToFill()
+                    .frame(width: 10, height:80)
+                    .padding(.vertical, 100)
+            } else {
+                Image("darkHeader").resizable()
+                    .scaledToFill()
+                    .frame(width: 10, height:80)
+                    .padding(.vertical, 100)
+            }
+           /* Image("header")
                 .resizable()
                 .scaledToFill()
                 .frame(width: 10, height:80)
-                .padding(.vertical, 100)
+                .padding(.vertical, 100)*/
             
             VStack(spacing: 24){
                 //Username

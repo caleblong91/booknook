@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+
 struct settingsRowView: View {
     let imagename: String
     let title: String
     let tintColor: Color
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         HStack(spacing: 12){
@@ -21,7 +23,7 @@ struct settingsRowView: View {
             
             Text(title)
                 .font(.subheadline)
-                .foregroundColor(.black)
+                .foregroundColor(.gray)
             
         }
     }

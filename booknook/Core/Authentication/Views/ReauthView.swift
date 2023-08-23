@@ -11,11 +11,17 @@ struct ReauthView: View {
     @State private var email = ""
     @State private var password = ""
     @EnvironmentObject var viewModel: authViewModel
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack{
             VStack{
                 //Image
-                Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
+                if colorScheme == .light {
+                    Image("lightHeader").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
+                } else {
+                    Image("darkHeader").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
+                }
+                //Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
                 
                 VStack(spacing: 24){
                     Text("To Delete Your Account, Please Re-enter Your Email and Password.").font(.headline).multilineTextAlignment(.center).padding(.bottom, 50)

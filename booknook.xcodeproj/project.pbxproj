@@ -40,7 +40,6 @@
 		7DCF092A2A8587F0008EC44B /* appViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF09292A8587F0008EC44B /* appViewModel.swift */; };
 		7DCF092C2A858D3F008EC44B /* scannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF092B2A858D3F008EC44B /* scannerView.swift */; };
 		7DCF09312A940BA4008EC44B /* dataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF09302A940BA4008EC44B /* dataScannerView.swift */; };
-		7DCF09332A94E7C6008EC44B /* alertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF09322A94E7C5008EC44B /* alertController.swift */; };
 		7DDBD8E02A7BE3180058CFFD /* booknookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD8DF2A7BE3180058CFFD /* booknookApp.swift */; };
 		7DDBD8E22A7BE3180058CFFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBD8E12A7BE3180058CFFD /* ContentView.swift */; };
 		7DDBD8E42A7BE3190058CFFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDBD8E32A7BE3190058CFFD /* Assets.xcassets */; };
@@ -83,7 +82,6 @@
 		7DCF09292A8587F0008EC44B /* appViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appViewModel.swift; sourceTree = "<group>"; };
 		7DCF092B2A858D3F008EC44B /* scannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scannerView.swift; sourceTree = "<group>"; };
 		7DCF09302A940BA4008EC44B /* dataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataScannerView.swift; sourceTree = "<group>"; };
-		7DCF09322A94E7C5008EC44B /* alertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertController.swift; sourceTree = "<group>"; };
 		7DDBD8DC2A7BE3180058CFFD /* booknook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = booknook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDBD8DF2A7BE3180058CFFD /* booknookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booknookApp.swift; sourceTree = "<group>"; };
 		7DDBD8E12A7BE3180058CFFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				7DCF09302A940BA4008EC44B /* dataScannerView.swift */,
-				7DCF09322A94E7C5008EC44B /* alertController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -498,7 +495,6 @@
 				7DDBD9182A82AB590058CFFD /* profileView.swift in Sources */,
 				7DDBD91C2A82B3E40058CFFD /* user.swift in Sources */,
 				7DDBD9122A8284880058CFFD /* loginView.swift in Sources */,
-				7DCF09332A94E7C6008EC44B /* alertController.swift in Sources */,
 				7D8016AD2A82EF1400613A43 /* authViewModel.swift in Sources */,
 				7DDBD8E02A7BE3180058CFFD /* booknookApp.swift in Sources */,
 				7DDBD9162A82A6060058CFFD /* RegistrationView.swift in Sources */,

@@ -12,12 +12,20 @@ struct loginView: View {
     @State private var email = ""
     @State private var password = ""
     @EnvironmentObject var viewModel: authViewModel
+    @State private var showAlert = false
+    @State private var errorMessage = ""
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack{
             VStack{
                 //Image
-                Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
+                if colorScheme == .light {
+                    Image("lightHeader").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
+                } else {
+                    Image("darkHeader").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
+                }
+                //Image("header").resizable().scaledToFill().frame(width: 10, height:80).padding(.vertical, 100)
                 
                 VStack(spacing: 24){
                     //Username
@@ -48,11 +56,13 @@ struct loginView: View {
                 }
                 //Sign In Button
                 Button(){
+                    
                     Task{
                         do{
                             try await viewModel.signIn(withEmail: email, password: password)
                         }catch{
-                            print(error.localizedDescription)
+                            showAlert.toggle()
+                            errorMessage = error.localizedDescription
                         }
                     }
                 }label: {
@@ -63,6 +73,8 @@ struct loginView: View {
                     }
                     .foregroundColor(.white)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                }.alert(isPresented: $showAlert) {
+                    Alert(title: Text("Error"), message: Text(verbatim: errorMessage), dismissButton: .default(Text("Okay")))
                 }
                 .background(Color(.systemBlue))
                 .cornerRadius(10)
